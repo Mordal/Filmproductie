@@ -7,42 +7,43 @@ Filmproductie webapplicatie
 - Installeer Angular `npm install -g @angular/cli`
 - Run `cd frontend && ng serve --open`
 ### Backend
+- From the backend folder, run `mvn spring-boot:run`
+- Backend is now listening on `localhost:8080`
 
 ## Applicatie
-database met films
+ database met films
     film bevat:
-        ID
-        titel
-        jaar van release
-        regisseur
-        rating 0-5 (1 cijfer na comma)
+- ID
+- titel
+- jaar
+- regisseur 
+- rating 0-5 (1 cijfer na comma)
 
 mogelijkheid om op film op te vragen op basis van:
-    ID
-    titel
-    jaar
-    regisseur
+- ID
+- titel
+- jaar
+- regisseur
 
 ### Frontend
-    kader met:
-        ID
-        titel
-        jaar van release
-        regisseur
-        rating 0-5 (1 cijfer na comma)
+Kader met: 
+- ID
+- titel
+- jaar
+- regisseur
+- rating 0-5 (1 cijfer na comma)
 
-    inputveld: zoeken naar films
-    Knop: zoeken
+Inputveld: zoeken naar films
+
+Knop: zoeken
 
  
 ### Backend
-    initial load
-        10 films toevoegen
+Initial load:  10 films toevoegen aan de database
     
-    ontvangt JSON met zoekstring:  
-        zoeken volgens een bepaalde volgorde (beschrijven in code)
+Ontvangt JSON met zoekstring:  
+    zoeken volgens een bepaalde volgorde (beschrijven in code)
 
-    return naar frontend:
-        JSON lijst van film objecten.
+Return naar frontend:
+    JSONArray van film objecten.
 
-        

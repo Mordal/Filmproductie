@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0592bd02-cf91-4172-a537-55b57ac42931" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/controller/filmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FilmList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/FilmList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FilmProductieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/FilmProductieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FilmProductieApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filmProdApp/FilmProductieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/FilmProductieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/FilmList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/classes/FilmList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filmProdApp/controller/filmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filmProdApp/controller/filmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filmProdApp/FilmProductieApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filmProdApp/FilmProductieApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filmProdApp/classes/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filmProdApp/classes/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filmProdApp/classes/FilmList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filmProdApp/classes/FilmList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filmProdApp/controller/filmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filmProdApp/controller/filmController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,5 +99,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

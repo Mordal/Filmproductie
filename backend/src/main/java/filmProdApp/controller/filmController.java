@@ -1,4 +1,6 @@
 package filmProdApp.controller;
+import filmProdApp.FilmProductieApplication;
+import org.json.JSONException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,12 +11,13 @@ import org.springframework.web.bind.annotation.*;
 public class filmController {
     @GetMapping(path = "/all", produces = "application/json")
     @ResponseBody
-    public String ShowAllMovies() {
-
-        return "[RETURN TEST]";
-
-
+    public String ShowAllMovies() throws JSONException {
+        return FilmProductieApplication.filmList.AsJson().toString();
     }
+
+//todo: POSTmapping handling met zoekstring
+
+
 }
 
 

@@ -16,9 +16,9 @@ public class Film {
         this.yearOfRelease = yearOfRelease;
         this.director = director;
         this.rating = rating;
-    }
 
-    public JSONObject FilmAsJson() throws JSONException {
+    }
+    public JSONObject AsJson() throws JSONException {
         JSONObject filmJson = new JSONObject();
         filmJson.put("ID",this.id);
         filmJson.put("Name",this.name);
@@ -27,15 +27,4 @@ public class Film {
         filmJson.put("rating",this.rating);
         return filmJson;
     }
-
-    public JSONObject FilmAsJson(Film film) throws JSONException {
-        JSONObject filmJson = new JSONObject();
-        filmJson.put("ID",film.id);
-        filmJson.put("Name",film.name);
-        filmJson.put("yearOfRelease",film.yearOfRelease);
-        filmJson.put("director",film.director);
-        filmJson.put("rating",film.rating);
-        return filmJson;
-    }
-
 }

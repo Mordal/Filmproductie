@@ -2,7 +2,6 @@ package filmProdApp.classes;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -17,10 +16,10 @@ public class FilmList {
         this.listOfFilms.add(film);
     }
 
-    public JSONArray filmListAsJson() throws JSONException {
+    public JSONArray AsJson() throws JSONException {
         JSONArray filmListJson = new JSONArray();
         for (Film film: this.listOfFilms) {
-            filmListJson.put(film.FilmAsJson());
+            filmListJson.put(film.AsJson());
         }
         return filmListJson;
     }
