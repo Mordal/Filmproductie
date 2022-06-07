@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Film } from 'src/app/model/film';
 import { FilmService } from 'src/app/services/film.service';
+import { FilmComponent } from '../film/film.component';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,8 @@ import { FilmService } from 'src/app/services/film.service';
 })
 export class HomeComponent implements OnInit {
   filmForm!: FormGroup;
-  response!: string;
+  films!: Film[];
+  error!: string;
 
   constructor(private formBuilder: FormBuilder, private filmService: FilmService) { }
 
@@ -23,10 +26,10 @@ export class HomeComponent implements OnInit {
     this.filmService.searchForFilm(this.filmForm.get('searchTerm')?.value)
       .subscribe({
         next: (data) => {
-          this.response = data;
+          this.films = data;
         },
         error: (error) => {
-          this.response = error.error;
+          this.error = error.error;
         }
       })
   }

@@ -1,14 +1,22 @@
 <div class="container">
-    <form [formGroup]="filmForm" (ngSubmit)="onSubmit()" class="form-group">
-        <div class="form-group content">
-            <label class="label">Zoekterm</label>
+    <h1 class="text-center m-5">FilmProductie</h1>
+    <form [formGroup]="filmForm" (ngSubmit)="onSubmit()" class="form-group mx-2 text-center">
+        <div class="form-group content d-inline-block w-75">
             <input class="form-control" type="text" placeholder="Geef een zoekterm in" id="searchterm" formControlName="searchTerm" data-cy="searchTerm">
         </div>
-        <div class="form-group">
-            <button class="btn-primary" data-cy="submit">Zoek</button>
+        <div class="form-group d-inline-block">
+            <button class="btn-primary mx-2 px-5 py-1" data-cy="submit">Zoek</button>
         </div>
     </form>
+    <div *ngIf="error" class="alert alert-danger m-3">
+        <pre>{{error}}</pre>
+    </div>
     <div>
-        <pre *ngIf="response">{{response}}</pre>
+        <ul>
+            <li *ngFor="let film of films">
+                <app-film [film]="film"></app-film>
+            </li>
+        </ul>
+        <pre *ngIf="films">{{films}}</pre>
     </div>
 </div>
