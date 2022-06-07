@@ -1,7 +1,7 @@
 # Filmproductie
 Filmproductie webapplicatie
 
-##Frontend instructies:
+## Frontend instructies:
 	- Installeer Node.js/npm
 	- Installeer Angular `npm install -g @angular/cli`
 	- Run `cd frontend && ng serve --open`
