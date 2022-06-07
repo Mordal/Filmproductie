@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="filmForm" (ngSubmit)="onSubmit()" class="form-group">
+        <div class="form-group content">
+            <label class="login-form-label">Film Id</label>
+            <input class="form-control" type="number" placeholder="Enter a film ID" id="filmid" formControlName="filmId" data-cy="filmId">
+        </div>
+        <div class="form-group">
+            <button class="btn-primary" data-cy="login">Submit</button>
+        </div>
+    </form>
+    <div>
+        <pre *ngIf="response">{{response}}</pre>
+    </div>
+</div>
