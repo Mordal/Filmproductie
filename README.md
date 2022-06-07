@@ -1,7 +1,14 @@
 # Filmproductie
 Filmproductie webapplicatie
 
-Applicatie
+## Instructies
+### Frontend
+- Installeer Node.js/npm
+- Installeer Angular `npm install -g @angular/cli`
+- Run `cd frontend && ng serve --open`
+### Backend
+
+## Applicatie
 database met films
     film bevat:
         ID
@@ -16,7 +23,7 @@ mogelijkheid om op film op te vragen op basis van:
     jaar
     regisseur
 
-Frontend
+### Frontend
     kader met:
         ID
         titel
@@ -28,7 +35,7 @@ Frontend
     Knop: zoeken
 
  
-Backend
+### Backend
     initial load
         10 films toevoegen
     

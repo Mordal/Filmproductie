@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Film } from 'src/app/model/film';
 import { FilmService } from 'src/app/services/film.service';
+import { FilmComponent } from '../film/film.component';
 
 @Component({
   selector: 'app-home',
@@ -9,24 +11,25 @@ import { FilmService } from 'src/app/services/film.service';
 })
 export class HomeComponent implements OnInit {
   filmForm!: FormGroup;
-  response!: string;
+  films!: Film[];
+  error!: string;
 
   constructor(private formBuilder: FormBuilder, private filmService: FilmService) { }
 
   ngOnInit(): void {
     this.filmForm = this.formBuilder.group({
-      filmId: ['', Validators.required],
+      searchTerm: ['', Validators.required],
     })
   }
 
   onSubmit() {
-    this.filmService.getFilmById(this.filmForm.get('filmId')?.value)
+    this.filmService.searchForFilm(this.filmForm.get('searchTerm')?.value)
       .subscribe({
         next: (data) => {
-          this.response = data;
+          this.films = data;
         },
         error: (error) => {
-          this.response = error.error;
+          this.error = error.error;
         }
       })
   }
