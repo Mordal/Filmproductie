@@ -10,7 +10,7 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
-  getFilmById(id: number) {
-    return this.http.get<any>(`${filmStoreUrl}/${id}`);
+  searchForFilm(term: string) {
+    return this.http.get<any>(`${filmStoreUrl}/${term}`);
   }
 }

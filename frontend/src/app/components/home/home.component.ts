@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.filmForm = this.formBuilder.group({
-      filmId: ['', Validators.required],
+      searchTerm: ['', Validators.required],
     })
   }
 
   onSubmit() {
-    this.filmService.getFilmById(this.filmForm.get('filmId')?.value)
+    this.filmService.searchForFilm(this.filmForm.get('searchTerm')?.value)
       .subscribe({
         next: (data) => {
           this.response = data;
