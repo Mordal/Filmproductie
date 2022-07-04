@@ -5,6 +5,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 
+
 public class FilmList {
     public ArrayList<Film> listOfFilms;
 
@@ -16,11 +17,15 @@ public class FilmList {
         this.listOfFilms.add(film);
     }
 
-    public JSONArray AsJson() throws JSONException {
+
+    public JSONArray FilmListAsJson() throws JSONException {
         JSONArray filmListJson = new JSONArray();
         for (Film film: this.listOfFilms) {
-            filmListJson.put(film.AsJson());
+            filmListJson.put(film.FilmAsJson());
         }
         return filmListJson;
     }
+
+
+
 }
