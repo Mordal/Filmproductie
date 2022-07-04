@@ -5,7 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 
@@ -31,7 +31,9 @@ public class FilmList {
     public JSONArray FilmListAsJson(ArrayList<Film> filmList) throws JSONException {
         JSONArray filmListJson = new JSONArray();
         for (Film film: filmList) {
-            filmListJson.put(film.FilmAsJson());
+            if(film !=  null) {
+                filmListJson.put(film.FilmAsJson());
+            }
         }
         return filmListJson;
     }
@@ -45,23 +47,46 @@ public class FilmList {
             //searching for ID
             if (Integer.toString(film.id).contains(searchString)){
                 listOfFilms.add(film);
-                continue;
             }
             //searching for title
-            if (film.name.contains(searchString)){
+            else if (film.name.toLowerCase().contains(searchString)){
                 listOfFilms.add(film);
-                continue;
             }
             //searching for year
-            if (Integer.toString(film.yearOfRelease).contains(searchString)){
+            else if (Integer.toString(film.yearOfRelease).contains(searchString)){
                 listOfFilms.add(film);
-                continue;
             }
             //searching for director
-            if (film.director.contains(searchString)){
+            else if (film.director.toLowerCase().contains(searchString)){
                 listOfFilms.add(film);
             }
         }
+
     return FilmListAsJson(listOfFilms);
     }
+
+    public ArrayList<Film> searchFilmsById(String id) {
+        return (ArrayList<Film>) FilmProductionApplication.filmList.listOfFilms.stream()
+                .filter(film -> Integer.toString(film.id).contains(id))
+                .collect(Collectors.toList());
+    }
+
+    public ArrayList<Film> searchFilmsByName(String name) {
+        return (ArrayList<Film>) FilmProductionApplication.filmList.listOfFilms.stream()
+                .filter(film -> film.name.toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public ArrayList<Film> searchFilmsByDirector(String director) {
+        return (ArrayList<Film>) FilmProductionApplication.filmList.listOfFilms.stream()
+                .filter(film -> film.director.toLowerCase().contains(director.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public ArrayList<Film> searchFilmsByYearOfRelease(String YearOfRelease) {
+        return (ArrayList<Film>) FilmProductionApplication.filmList.listOfFilms.stream()
+                .filter(film -> Integer.toString(film.yearOfRelease).contains(YearOfRelease))
+                .collect(Collectors.toList());
+    }
+
 }

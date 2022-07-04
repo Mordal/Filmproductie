@@ -27,9 +27,9 @@ public class Film {
         JSONObject filmJson = new JSONObject();
         filmJson.put("ID",this.id);
         filmJson.put("Name",this.name);
-        filmJson.put("yearOfRelease",this.yearOfRelease);
-        filmJson.put("director",this.director);
-        filmJson.put("rating",this.rating);
+        filmJson.put("YearOfRelease",this.yearOfRelease);
+        filmJson.put("Director",this.director);
+        filmJson.put("Rating",this.rating);
         return filmJson;
     }
 
