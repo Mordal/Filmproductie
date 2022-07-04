@@ -14,8 +14,11 @@ public class filmController {
         return FilmProductionApplication.filmList.FilmListAsJson().toString();
     }
 
-//todo: POSTmapping handling met zoekstring
-
+    @GetMapping(path = "/search/{searchString}", produces = "application/json")
+    @ResponseBody
+    public String SearchForMovies(@PathVariable(value = "searchString") String searchString) throws JSONException {
+        return FilmProductionApplication.filmList.searchFilmsByString(searchString).toString();
+}
 
 }
 

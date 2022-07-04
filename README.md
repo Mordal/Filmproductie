@@ -39,11 +39,13 @@ Knop: zoeken
 
  
 ### Backend
-Initial load:  10 films toevoegen aan de database
-    
-Ontvangt JSON met zoekstring:  
-    zoeken volgens een bepaalde volgorde (beschrijven in code)
+Initial load:  films toevoegen aan de database
 
-Return naar frontend:
+Ontvangt GET request op localhost:8080/all
+-> return volledige lijst van films
+    
+Ontvangt GET request met zoekstring op localhost:8080/search/{searchString}
+    zoeken volgens een bepaalde volgorde (beschrijven in code)
+-> Return naar frontend:
     JSONArray van film objecten.
 
