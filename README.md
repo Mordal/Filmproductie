@@ -51,6 +51,6 @@ Ontvangt GET request met zoekstring op localhost:8080/search/{searchString}
 
 Ontvangt GET request met Query parameters op localhost:8080/search? en localhost:8080/search/?
     voorbeeld: http://localhost:8080/search?yearOfRelease=20&name=Ram
-    zoekt volledige matches (moet nog uitgewerkt worden. nu worden alle de films per key meegenomen, zonder te kijken naar een andere key) 
+    zoekt volledige matches (moet nog uitgewerkt worden. nu worden al de films per key meegenomen, zonder te kijken naar een andere key) 
 -> Return naar frontend:
     JSONArray van film objecten.

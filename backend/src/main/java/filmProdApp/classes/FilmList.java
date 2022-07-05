@@ -6,6 +6,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -63,6 +64,21 @@ public class FilmList {
         }
 
     return FilmListAsJson(listOfFilms);
+    }
+
+    public JSONArray searchFilmsByParameters(Map<String, String> paramaters) throws JSONException {
+        ArrayList<Film> matchingFilms = new ArrayList<>();
+        for (String key: paramaters.keySet()){
+            switch (key.toLowerCase()) {
+                case "id" -> matchingFilms.addAll(searchFilmsById(paramaters.get(key)));
+                case "name" -> matchingFilms.addAll(searchFilmsByName(paramaters.get(key)));
+                case "yearofrelease" -> matchingFilms.addAll(searchFilmsByYearOfRelease(paramaters.get(key)));
+                case "director" -> matchingFilms.addAll(searchFilmsByDirector(paramaters.get(key)));
+            }
+        }
+        //delete doubles
+        matchingFilms = (ArrayList<Film>) matchingFilms.stream().distinct().collect(Collectors.toList());
+        return FilmListAsJson(matchingFilms);
     }
 
     public ArrayList<Film> searchFilmsById(String id) {
