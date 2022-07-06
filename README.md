@@ -7,6 +7,8 @@ Filmproductie webapplicatie
 - Installeer Angular `npm install -g @angular/cli`
 - Run `cd frontend && ng serve --open`
 ### Backend
+- Installeer java v16+
+- Installeer Maeven
 - From the backend folder, run `mvn spring-boot:run`
 - Backend is now listening on `localhost:8080`
 
@@ -46,11 +48,9 @@ Ontvangt GET request op localhost:8080/all
     
 Ontvangt GET request met zoekstring op localhost:8080/search/{searchString}
     zoeken volgens een bepaalde volgorde (beschrijven in code)
--> Return naar frontend:
-    JSONArray van film objecten.
+-> Return JSONArray van film objecten.
 
 Ontvangt GET request met Query parameters op localhost:8080/search? en localhost:8080/search/?
     voorbeeld: http://localhost:8080/search?yearOfRelease=20&name=Ram
     zoekt volledige matches (moet nog uitgewerkt worden. nu worden al de films per key meegenomen, zonder te kijken naar een andere key) 
--> Return naar frontend:
-    JSONArray van film objecten.
+-> Return JSONArray van film objecten.
