@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Film } from 'src/app/model/film';
 
 @Component({
@@ -7,9 +7,10 @@ import { Film } from 'src/app/model/film';
   styleUrls: ['./film.component.css']
 })
 export class FilmComponent implements OnInit {
-  film!: Film;
+  @Input() film!: Film
 
-  constructor(film: Film) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
