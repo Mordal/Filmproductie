@@ -26,10 +26,12 @@ export class HomeComponent implements OnInit {
     this.filmService.searchForFilm(this.filmForm.get('searchTerm')?.value)
       .subscribe({
         next: (data) => {
+          console.log(data)
           this.films = data;
         },
-        error: (error) => {
-          this.error = error.error;
+        error: (error: string) => {
+          this.error = error;
+          console.log(error)
         }
       })
   }
